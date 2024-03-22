@@ -1,13 +1,10 @@
-import './scss/app.scss'
-import Header from './components/Header'
-import Categories from './components/Categories'
-import Sort from './components/Sort'
-import PizzaBlock from './components/PizzaBlock'
-import { useState } from 'react'
+import "../scss/app.scss";
+import Header from "./Header";
+import Categories from "./Categories";
+import Sort from "./Sort";
+import Card from "./Card";
 
 function App() {
-  const [cards, setCards] = useState([]);
-
   return (
     <div className="wrapper">
       <Header />
@@ -19,12 +16,12 @@ function App() {
           </div>
           <h2 className="content__title">Все пиццы</h2>
           <div className="content__items">
-          <PizzaBlock  title={'Мексиканская'} price={500} />
+            <Card title={"Мексиканская"} price={500} />
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
