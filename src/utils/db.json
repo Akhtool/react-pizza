@@ -120,5 +120,51 @@
       "category": 5,
       "rating": 3
     }
+  ],
+  "cartItems": [
+    {
+      "id": 0,
+      "imageUrl": "https://media.dodostatic.net/image/r:584x584/11EE7D612FC7B7FCA5BE822752BEE1E5.webp",
+      "title": "Пепперони Фреш с перцем",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 803,
+      "category": 0,
+      "rating": 4,
+      "count" : 3
+    },
+    {
+      "id": 1,
+      "imageUrl": "https://media.dodostatic.net/image/r:584x584/11EE7D610D2925109AB2E1C92CC5383C.webp",
+      "title": "Сырная",
+      "types": [0],
+      "sizes": [26, 40],
+      "price": 245,
+      "category": 0,
+      "rating": 6,
+      "count" : 1
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://media.dodostatic.net/image/r:584x584/11EE7D6110059795842D40396BCF1E73.webp",
+      "title": "Цыпленок барбекю",
+      "types": [0],
+      "sizes": [26, 40],
+      "price": 295,
+      "category": 1,
+      "rating": 4,
+      "count" : 2
+    },
+    {
+      "id": 9,
+      "imageUrl": "https://media.dodostatic.net/image/r:584x584/11EE7D613D0D7382B2D4AAEB5202DD16.webp",
+      "title": "Карбонара",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 469,
+      "category": 5,
+      "rating": 10,
+      "count" : 1
+    }
   ]
 }
