@@ -1,21 +1,42 @@
-function Card({ title, price }) {
+import { useState } from "react";
+const typeNames = ["Тонкое", "Традиционное"];
+
+function Card({ title, price, imageUrl, sizes, types, id }) {
+  const [activeType, setActiveType] = useState(0);
+  const [activeSize, setActiveSize] = useState(0);
+
   return (
     <div className="pizza-block">
-      <img
-        className="pizza-block__image"
-        src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
-        alt="Pizza"
-      />
+      <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
       <h4 className="pizza-block__title">{title}</h4>
       <div className="pizza-block__selector">
         <ul>
-          <li className="active">Тонкое</li>
-          <li>Традиционное</li>
+          {types.map((type) => (
+            <li
+              onClick={() => setActiveType(type)}
+              key={id}
+              className={
+                activeType === type
+                  ? "active"
+                  : "" || types.length === 1
+                  ? "active"
+                  : ""
+              }
+            >
+              {typeNames[type]}
+            </li>
+          ))}
         </ul>
         <ul>
-          <li className="active">26 см</li>
-          <li>30 см</li>
-          <li>40 см</li>
+          {sizes.map((item, index) => (
+            <li
+              onClick={() => setActiveSize(index)}
+              className={activeSize === index ? "active" : ""}
+              key={id}
+            >
+              {item} см
+            </li>
+          ))}
         </ul>
       </div>
       <div className="pizza-block__bottom">

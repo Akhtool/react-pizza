@@ -10,7 +10,6 @@ const categories = [
 ];
 function Categories() {
   const [activeCategory, setActiveCatefory] = useState(0);
-  const onClickCategory = (index) => setActiveCatefory(index);
   return (
     <div className="categories">
       <ul>
@@ -18,7 +17,7 @@ function Categories() {
           <li
             key={index}
             className={activeCategory === index ? "active" : ""}
-            onClick={() => onClickCategory(index)}
+            onClick={() => setActiveCatefory(index)}
           >
             {value}
           </li>

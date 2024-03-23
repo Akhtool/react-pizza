@@ -3,6 +3,7 @@ import Header from "./Header";
 import Categories from "./Categories";
 import Sort from "./Sort";
 import Card from "./Card";
+import pizzas from "../utils/pizzas.json";
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
           </div>
           <h2 className="content__title">Все пиццы</h2>
           <div className="content__items">
-            <Card title={"Мексиканская"} price={500} />
+            {pizzas.map((item) => (
+              <Card {...item} key={item.id} />
+            ))}
           </div>
         </div>
       </div>
