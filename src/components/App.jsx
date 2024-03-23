@@ -3,9 +3,25 @@ import Header from "./Header";
 import Categories from "./Categories";
 import Sort from "./Sort";
 import Card from "./Card";
-import pizzas from "../utils/pizzas.json";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function App() {
+  const [pizzas, setPizzas] = useState([]);
+
+  const PIZZAS_URL = "http://localhost:3000/pizzas";
+
+  const getPizzaCards = () => {
+    axios
+      .get(PIZZAS_URL)
+      .then((res) => setPizzas(res.data))
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    getPizzaCards();
+  }, []);
+
   return (
     <div className="wrapper">
       <Header />
