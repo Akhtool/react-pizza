@@ -11,10 +11,10 @@ function Card({ title, price, imageUrl, sizes, types, id }) {
       <h4 className="pizza-block__title">{title}</h4>
       <div className="pizza-block__selector">
         <ul>
-          {types.map((type) => (
+          {types.map((type, index) => (
             <li
               onClick={() => setActiveType(type)}
-              key={id}
+              key={`type-${index}`}
               className={
                 activeType === type
                   ? "active"
@@ -32,7 +32,7 @@ function Card({ title, price, imageUrl, sizes, types, id }) {
             <li
               onClick={() => setActiveSize(index)}
               className={activeSize === index ? "active" : ""}
-              key={id}
+              key={`size-${id}-${index}`}
             >
               {item} см
             </li>
